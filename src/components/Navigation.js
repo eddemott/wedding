@@ -17,7 +17,7 @@ const Navigation = () =>
 const Nav = styled.nav`
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 120px;
   width: 100%;
   position: fixed;
