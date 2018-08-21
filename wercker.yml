@@ -13,55 +13,9 @@ build:
       name: build
       code: yarn build
 
-    - script:
-      name: install functions dependencies
-      code: |
-        cd functions
-        yarn --pure-lockfile
-        cd ..
-        
-  after-steps:
-    - slack-notifier:
-        url: $SLACK_URL
-        channel: $SLACK_CHANNEL
-        username: Build Bot
-
 deploy-firebase:
   steps:
     - script:
       name: deploy to firebase
       code: |
         firebase deploy --project $FIREBASE_PROJECT_NAME --token $FIREBASE_TOKEN
-  after-steps:
-    - slack-notifier:
-        url: $SLACK_URL
-        channel: $SLACK_CHANNEL
-        username: Firebase Deploy
-
-deploy-bluemix:
-  steps:
-    - script:
-      name: download cloudfoundry CLI
-      code: |
-        wget https://s3.amazonaws.com/go-cli/releases/v6.12.4/cf-cli_amd64.deb -qO temp.deb && sudo dpkg -i temp.deb
-    - script:
-      name: remove temp.deb
-      code: rm temp.deb
-
-    - script:
-      name: Bluemix login
-      code: |
-        cf login -a ${CF_API} -u ${CF_USERNAME} -p ${BLUEMIX_PASSWORD} -o ${CF_ORG} -s ${CF_SPACE}
-    - script:
-      name: Install autopilot plugin
-      code: |
-        cf install-plugin autopilot -r CF-Community
-    - script:
-      name: deploy
-      code: |
-        cf zero-downtime-push ${CF_APP_NAME} -f ./manifest.yml
-  after-steps:
-    - slack-notifier:
-        url: $SLACK_URL
-        channel: $SLACK_CHANNEL
-        username: Bluemix Deploy
