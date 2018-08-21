@@ -1,8 +1,6 @@
 import React from 'react';
 
 const TaxiPage = () =>
-  <div>
-    <h1>Taxi's Page</h1>
-  </div>
+  <div></div>
 
 export default TaxiPage;
