@@ -26,17 +26,18 @@ const BackgroundImage = styled.div`
         height: auto;
     }
     .imgWrapper {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
         transform: translateY(-50%);
         overflow: hidden;
     }
     .background {
+        box-sizing: border-box;
+        position: absolute;
         overflow: hidden;
         height: 100vh;
         max-height: 100vh;
+        width: 100vw;
+        padding-top: 50vh;
+        z-index: -1;
     }
     overflow: hidden;
     height: 100vh;
