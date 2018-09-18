@@ -6,9 +6,11 @@ import {
 
 import Navigation from './Navigation';
 import AccommodationPage from './Accommodation';
-import TaxiPage from './Taxi';
+import ActivitiesPage from './Activities';
 import HomePage from './Home';
 import RegistryPage from './Registry';
+import RsvpPage from './RSVP';
+import WeddingPage from './Wedding'
 
 import * as routes from '../constants/routes';
 
@@ -16,7 +18,6 @@ const App = () =>
   <Router>
     <div>
       <Navigation />
-      
       <Route
         exact path={routes.home}
         component={() => <HomePage />}
@@ -26,12 +27,20 @@ const App = () =>
         component={() => <AccommodationPage />}
       />
       <Route
-        exact path={routes.Taxi}
-        component={() => <TaxiPage />}
+        exact path={routes.Activities}
+        component={() => <ActivitiesPage />}
       />
       <Route
         exact path={routes.Registry}
         component={() => <RegistryPage />}
+      />
+      <Route
+        exact path={routes.RSVP}
+        component={() => <RsvpPage />}
+      />
+    <Route
+        exact path={routes.Wedding}
+        component={() => <WeddingPage />}
       />
     </div>
   </Router>

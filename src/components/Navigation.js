@@ -7,26 +7,38 @@ import * as routes from '../constants/routes';
 const Navigation = () =>
 <Nav>
   <ul>
-    <li><Link to={routes.home}>Home</Link></li>
-    <li><Link to={routes.Accommodation}>Accommodation</Link></li>
-    <li><Link to={routes.Taxi}>Taxi's</Link></li>
-    <li><Link to={routes.Registry}>Registry</Link></li>
-  </ul>  
+      <li><Link to={routes.home}>Home</Link></li>
+      <li><Link to={routes.Accommodation}>Where to stay</Link></li>
+      <li><Link to={routes.Activities}>What to do</Link></li>
+      <li><Link to={routes.Wedding}>On the day</Link></li>
+      <li><Link to={routes.Registry}>Registry</Link></li>
+      <li><Link to={routes.RSVP}>RSVP</Link></li>
+  </ul>
 </Nav>
 
 const Nav = styled.nav`
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 120px;
+  height: 100px;
   width: 100%;
   position: fixed;
   background: white;
   opacity: .8;
 
+  div {
+    border-bottom: 3px;
+    border-bottom-color: black;
+  }
+
+  ul {
+    padding: 0px;
+  }
+
   li {
     display: inline;
-    margin-left: 60px;
+    margin: 30px;
+
   }
 `;
 

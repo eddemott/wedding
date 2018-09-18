@@ -1,9 +1,9 @@
 import React from 'react';
 import ComingSoon from './ComingSoon';
 
-const RegistryPage = () =>
+const ActivitiesPage = () =>
 <ComingSoon>
     Coming soon
 </ComingSoon>
 
-export default RegistryPage;
+export default ActivitiesPage;
