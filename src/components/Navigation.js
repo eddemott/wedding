@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import StyledLink from './StyledLink';
 import styled from 'styled-components';
 
 import * as routes from '../constants/routes';
@@ -7,12 +7,12 @@ import * as routes from '../constants/routes';
 const Navigation = () =>
 <Nav>
   <ul>
-      <li><Link to={routes.home}>Home</Link></li>
-      <li><Link to={routes.Accommodation}>Where to stay</Link></li>
-      <li><Link to={routes.Activities}>What to do</Link></li>
-      <li><Link to={routes.Wedding}>On the day</Link></li>
-      <li><Link to={routes.Registry}>Registry</Link></li>
-      <li><Link to={routes.RSVP}>RSVP</Link></li>
+      <li><StyledLink to={routes.home}>Home</StyledLink></li>
+      <li><StyledLink to={routes.Accommodation}>Where to stay</StyledLink></li>
+      <li><StyledLink to={routes.Activities}>What to do</StyledLink></li>
+      <li><StyledLink to={routes.Wedding}>On the day</StyledLink></li>
+      <li><StyledLink to={routes.Registry}>Registry</StyledLink></li>
+      <li><StyledLink to={routes.RSVP}>RSVP</StyledLink></li>
   </ul>
 </Nav>
 
@@ -21,7 +21,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: center;
   height: 100px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   background: white;
   opacity: .8;
@@ -38,7 +38,6 @@ const Nav = styled.nav`
   li {
     display: inline;
     margin: 30px;
-
   }
 `;
 
