@@ -1,6 +1,9 @@
 import React from 'react';
+import ComingSoon from './ComingSoon';
 
 const AccommodationPage = () =>
-<div></div>
+<ComingSoon>
+    Coming soon
+</ComingSoon>
 
 export default AccommodationPage;

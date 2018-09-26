@@ -10,7 +10,7 @@ const StyledLink = styled(Link)`
         text-decoration: none;
     }
     :hover {
-        color: red;
+        color: #2d3a2d;;
     }
 `;
 
