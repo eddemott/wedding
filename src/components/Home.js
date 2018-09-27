@@ -62,15 +62,12 @@ const BackgroundImage = styled.div`
     .mob {
       display: inline-block;
       width: 50vw;
-      height: 42vh;
+      height: 50vh;
     }
     .desktop {
       display: none;
-}
-      .image5, .image6 {
-        padding-bottom: 16vh;
-      }
     }
+  }
   }
 `;
 
