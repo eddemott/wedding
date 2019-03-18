@@ -68,7 +68,6 @@ const BackgroundImage = styled.div`
       display: none;
     }
   }
-  }
 `;
 
 const SaveTheDate = styled.div`
