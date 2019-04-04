@@ -6,7 +6,6 @@ import {
 
 import Navigation from '../containers/Navigation';
 import AccommodationPage from './Accommodation';
-import ActivitiesPage from './Activities';
 import HomePage from './Home';
 import RegistryPage from './Registry';
 import RsvpPage from './RSVP';
@@ -25,10 +24,6 @@ const App = () =>
       <Route
         exact path={routes.Accommodation}
         component={() => <AccommodationPage />}
-      />
-      <Route
-        exact path={routes.Activities}
-        component={() => <ActivitiesPage />}
       />
       <Route
         exact path={routes.Registry}

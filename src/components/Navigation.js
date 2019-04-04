@@ -133,10 +133,10 @@ class Navigation extends React.Component {
           <ul>
             <li><StyledLink to={routes.home}>Home</StyledLink></li>
             <li><StyledLink to={routes.Accommodation}>Where to stay</StyledLink></li>
-            <li><StyledLink to={routes.Activities}>What to do</StyledLink></li>
+            <li><StyledLink to={routes.RSVP}>RSVP</StyledLink></li>
             <li><StyledLink to={routes.Wedding}>On the day</StyledLink></li>
             <li><StyledLink to={routes.Registry}>Registry</StyledLink></li>
-            <li><StyledLink to={routes.RSVP}>RSVP</StyledLink></li>
+
           </ul>
           {this.state.mobileNavVisible ? <Close onClick={this.hideNav}><div><img src={require('../assets/close-button.png')} alt="Hamburger"></img></div></Close> : null}
         </MobileNav>
