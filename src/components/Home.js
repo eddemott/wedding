@@ -1,28 +1,62 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const HomePage = () =>
-<BackgroundImage>
+const HomePage = () => (
+  <BackgroundImage>
     <div className="background">
-        <div className="imgWrapper">
-            <img className='image1 desktop' src={require('../assets/EandB.3.jpg')} alt="Ed and Becca wedding"></img>
-            <img className='image2 desktop' src={require('../assets/EandB.1.jpg')} alt="Ed and Becca bogota"></img>
-            <img className='image3 desktop' src={require('../assets/EandB.2.jpg')} alt="Ed and Becca Ibiza"></img>
-            <img className='image4 desktop' src={require('../assets/EandB.4.jpg')} alt="Ed and Becca onesie"></img>
-            <img className='image5 mob' src={require('../assets/EandB.5.jpg')} alt="Ed and Becca onesie"></img>
-            <img className='image6 mob' src={require('../assets/EandB.6.jpg')} alt="Ed and Becca onesie"></img>
-            <img className='image7 mob' src={require('../assets/EandB.7.jpg')} alt="Ed and Becca onesie"></img>
-            <img className='image8 mob' src={require('../assets/EandB.8.jpg')} alt="Ed and Becca onesie"></img>
-        </div>
+      <div className="imgWrapper">
+        <img
+          className="image1 desktop"
+          src={require("../assets/EandB.3.jpg")}
+          alt="Ed and Becca wedding"
+        />
+        <img
+          className="image2 desktop"
+          src={require("../assets/EandB.1.jpg")}
+          alt="Ed and Becca bogota"
+        />
+        <img
+          className="image3 desktop"
+          src={require("../assets/EandB.2.jpg")}
+          alt="Ed and Becca Ibiza"
+        />
+        <img
+          className="image4 desktop"
+          src={require("../assets/EandB.4.jpg")}
+          alt="Ed and Becca onesie"
+        />
+        <img
+          className="image5 mob"
+          src={require("../assets/EandB.5.jpg")}
+          alt="Ed and Becca onesie"
+        />
+        <img
+          className="image6 mob"
+          src={require("../assets/EandB.6.jpg")}
+          alt="Ed and Becca onesie"
+        />
+        <img
+          className="image7 mob"
+          src={require("../assets/EandB.7.jpg")}
+          alt="Ed and Becca onesie"
+        />
+        <img
+          className="image8 mob"
+          src={require("../assets/EandB.8.jpg")}
+          alt="Ed and Becca onesie"
+        />
+      </div>
     </div>
-    
-    <SaveTheDate>
-        <div>BECCA & ED</div>
-        <div className='save'>Save<span className='the'> the </span>date</div>
-        <div>29.06.19 | HARROGATE</div>
-    </SaveTheDate>
-</BackgroundImage>
 
+    <SaveTheDate>
+      <div>BECCA & ED</div>
+      <div className="save">
+        Save<span className="the"> the </span>date
+      </div>
+      <div>29.06.19 | HARROGATE</div>
+    </SaveTheDate>
+  </BackgroundImage>
+);
 
 const BackgroundImage = styled.div`
   img {

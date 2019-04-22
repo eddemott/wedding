@@ -5,28 +5,32 @@ import styled from "styled-components";
 import * as routes from "../constants/routes";
 
 const NavContainer = styled.div`
-@media screen and (min-width: 950px) {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  width: 100vw;
-  position: fixed;
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  ul {
-    padding: 0px;
-  }
+  @media screen and (min-width: 950px) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    ul {
+      padding: 0px;
+    }
 
-  li {
-    display: inline;
-    margin: 30px;
-  }
+    li {
+      display: inline;
+      margin: 30px;
+    }
 
-  a:hover {
-    border-bottom: 3px solid #2d3a2d;;
-    bottom: 0;
+    a:hover {
+      border-bottom: 3px solid #2d3a2d;
+      bottom: 0;
+    }
   }
-}
 `;
 
 const MobileNav = styled.nav`
@@ -41,13 +45,13 @@ const MobileNav = styled.nav`
     transition: transform 0.75s ease-in-out;
     transform: translateY(
       ${props => {
-    if (!props.mobileNavVisible) {
-      return "-125%";
-    }
-    return "0%";
-  }
-  });  
-  ul {
+        if (!props.mobileNavVisible) {
+          return "-125%";
+        }
+        return "0%";
+      }}
+    );
+    ul {
       position: fixed;
       top: 80px;
       width: 100%;
@@ -55,26 +59,26 @@ const MobileNav = styled.nav`
       margin: 0 auto;
       padding: 0;
     }
-      ul li {
+    ul li {
       display: block;
       padding: 0;
       margin: 50px 0;
       text-align: center;
     }
-      ul a {
+    ul a {
       opacity: 0.8;
     }
     div {
-  position: fixed;
-  top: 2vh;
-  left: 5vw;
-  width: 7vw;
-  height: 5vh;
-   img {
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    }
+      position: fixed;
+      top: 2vh;
+      left: 5vw;
+      width: 7vw;
+      height: 5vh;
+      img {
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+      }
     }
   }
 `;
@@ -131,16 +135,39 @@ class Navigation extends React.Component {
       <NavContainer>
         <MobileNav mobileNavVisible={this.state.mobileNavVisible}>
           <ul>
-            <li><StyledLink to={routes.home}>Home</StyledLink></li>
-            <li><StyledLink to={routes.Accommodation}>Where to stay</StyledLink></li>
-            <li><StyledLink to={routes.RSVP}>RSVP</StyledLink></li>
-            <li><StyledLink to={routes.Wedding}>On the day</StyledLink></li>
-            <li><StyledLink to={routes.Registry}>Registry</StyledLink></li>
-
+            <li>
+              <StyledLink to={routes.home}>Home</StyledLink>
+            </li>
+            <li>
+              <StyledLink to={routes.Wedding}>On the day</StyledLink>
+            </li>
+            <li>
+              <StyledLink to={routes.RSVP}>RSVP</StyledLink>
+            </li>
+            <li>
+              <StyledLink to={routes.AdditionalInfo}>
+                Additional info
+              </StyledLink>
+            </li>
           </ul>
-          {this.state.mobileNavVisible ? <Close onClick={this.hideNav}><div><img src={require('../assets/close-button.png')} alt="Hamburger"></img></div></Close> : null}
+          {this.state.mobileNavVisible ? (
+            <Close onClick={this.hideNav}>
+              <div>
+                <img
+                  src={require("../assets/close-button.png")}
+                  alt="Hamburger"
+                />
+              </div>
+            </Close>
+          ) : null}
         </MobileNav>
-        <MobileNavButton onClick={this.showNav}><img src={require('../assets/hamburger.png')} className='Hamburger' alt="Hamburger"></img></MobileNavButton>
+        <MobileNavButton onClick={this.showNav}>
+          <img
+            src={require("../assets/hamburger.png")}
+            className="Hamburger"
+            alt="Hamburger"
+          />
+        </MobileNavButton>
       </NavContainer>
     );
   }
