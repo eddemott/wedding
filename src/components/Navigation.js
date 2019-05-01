@@ -11,6 +11,7 @@ const NavContainer = styled.div`
     justify-content: center;
     height: 100px;
     width: 100vw;
+    z-index: 11;
     position: fixed;
     background: -webkit-linear-gradient(
       top,
