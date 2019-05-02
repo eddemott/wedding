@@ -155,7 +155,9 @@ class Navigation extends React.Component {
             <Close onClick={this.hideNav}>
               <div>
                 <img
-                  src={require("../assets/close-button.png")}
+                  src={
+                    "https://res.cloudinary.com/eddemott/image/upload/v1556787907/close-button_g0p8em.png"
+                  }
                   alt="Hamburger"
                 />
               </div>
@@ -164,7 +166,9 @@ class Navigation extends React.Component {
         </MobileNav>
         <MobileNavButton onClick={this.showNav}>
           <img
-            src={require("../assets/hamburger.png")}
+            src={
+              "https://res.cloudinary.com/eddemott/image/upload/v1556787908/hamburger_az4ojj.png"
+            }
             className="Hamburger"
             alt="Hamburger"
           />

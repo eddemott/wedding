@@ -7,42 +7,58 @@ const HomePage = () => (
       <div className="imgWrapper">
         <img
           className="image1 desktop"
-          src={require("../assets/EandB.3.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787907/EandB.3.jpg"
+          }
           alt="Ed and Becca wedding"
         />
         <img
           className="image2 desktop"
-          src={require("../assets/EandB.1.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787906/EandB.1.jpg"
+          }
           alt="Ed and Becca bogota"
         />
         <img
           className="image3 desktop"
-          src={require("../assets/EandB.2.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787914/EandB.2.jpg"
+          }
           alt="Ed and Becca Ibiza"
         />
         <img
           className="image4 desktop"
-          src={require("../assets/EandB.4.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787907/EandB.4.jpg"
+          }
           alt="Ed and Becca onesie"
         />
         <img
           className="image5 mob"
-          src={require("../assets/EandB.5.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787907/EandB.5.jpg"
+          }
           alt="Ed and Becca onesie"
         />
         <img
           className="image6 mob"
-          src={require("../assets/EandB.6.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787907/EandB.6.jpg"
+          }
           alt="Ed and Becca onesie"
         />
         <img
           className="image7 mob"
-          src={require("../assets/EandB.7.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787912/EandB.7.jpg"
+          }
           alt="Ed and Becca onesie"
         />
         <img
           className="image8 mob"
-          src={require("../assets/EandB.8.jpg")}
+          src={
+            "https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787908/EandB.8.jpg"
+          }
           alt="Ed and Becca onesie"
         />
       </div>

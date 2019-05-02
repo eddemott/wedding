@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Line from "./line";
-
-import saveTheDate from "../assets/savethedate.jpeg";
-import sunPavillion from "../assets/Front.Invitation.jpg";
-import shades from "../assets/shades.jpg";
-import kayak from "../assets/kayak.jpg";
+import Link from "./Link";
 
 const WeddingPage = () => (
   <div>
@@ -30,14 +26,25 @@ const WeddingPage = () => (
             traffic can be heavy on a Saturday. The groomsparty will be enjoying
             a drink in the Fat Badger Public House beforehand if you wish to
             arrive earlier.
-          </p>
-          <p>
+            <br />
             After the ceremony, transport will be provided to the reception
             venue, where there is limited space for parking.
           </p>
-          <a href="www.thefatbadgerharrogate.com">The Fat Badger</a>
-          <p> </p>
-          <a href="www.thesunpavillion.co.uk">The Sun Pavillion</a>
+          <Link
+            href="www.thefatbadgerharrogate.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            The Fat Badger
+          </Link>
+          <br />
+          <Link
+            href="www.thesunpavillion.co.uk"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            The Sun Pavillion
+          </Link>
         </div>
       </div>
       <div className="image image1" alt="Socks" />
@@ -70,10 +77,23 @@ const WeddingPage = () => (
             Hay a Park is half a mile past Knaresborough Rugby Club.
           </p>
           <p>
-            Reception Address: The Stables, Hall Farm Barns, Hay a Park,
-            Knaresborough, HG5 0SN
+            <span>Address : </span>
+            <Link
+              href="https://goo.gl/maps/kKdfeJATntC93xSa6"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              The Stables, Hall Farm Barns, Hay a Park, Knaresborough, HG5 0SN
+            </Link>
+            <br />
+            <Link
+              href="http://bluelinetaxis.co.uk/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Blue Line Taxis
+            </Link>
           </p>
-          <p>Taxi links- blue line</p>
         </div>
       </div>
       <div className="image image3" alt="Bus" />
@@ -92,22 +112,51 @@ const Banner = styled.div`
     line-height: 1.2;
     display: block;
     text-align: center;
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
     font-weight: 300;
     padding-top: 1em;
   }
-  
+
   .content {
     width: 50%;
   }
   .imageBanner {
-    background-image: url("${saveTheDate}");
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787910/savethedate_zk4gwg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
   }
+  @media screen and (max-width: 850px) {
+    flex-direction: column-reverse;
+    text-align: center;
 
+    p {
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .content {
+      padding: 2.5rem 2rem 0.5rem 2rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .imageBanner {
+      width: 100%;
+      max-width: 100%;
+      height: 45vh;
+    }
+  }
 `;
 
 const Spotlight = styled.div`
@@ -116,14 +165,15 @@ const Spotlight = styled.div`
   display: flex;
   flex-direction: row-reverse;
   position: relative;
+  z-index: -1;
 
   .content {
     width: 65%;
   }
 
   .textWrapper {
-    padding: 6rem 10rem 3rem 6rem
-    width: 75%; 
+    padding: 6rem 10rem 3rem 6rem;
+    width: 75%;
     margin: 0 auto;
     align-self: center;
   }
@@ -148,6 +198,12 @@ const Spotlight = styled.div`
     font-weight: 300;
   }
 
+  a {
+    font-size: 1.25rem;
+    margin: 0 0 2rem 0;
+    font-weight: 300;
+  }
+
   .image {
     background-position: center;
     background-repeat: no-repeat;
@@ -155,13 +211,13 @@ const Spotlight = styled.div`
     width: 35%;
   }
   .image1 {
-    background-image: url("${sunPavillion}");
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787920/paintedSunPav_qzolvv.jpg");
   }
   .image2 {
-    background-image: url("${shades}");
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787849/shades.jpg");
   }
   .image3 {
-    background-image: url("${kayak}}");
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787854/kayak_ww3qgr.jpg");
   }
 `;
 

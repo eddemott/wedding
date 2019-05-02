@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import harrogateMap from "../assets/harrogateMap.jpg";
-import windmill from "../assets/windmill.jpg";
-import exit from "../assets/exit.jpg";
-import bestival from "../assets/bestival.jpg";
+import Link from "./Link";
 
 const AdditionalInfo = () => (
   <div>
@@ -22,13 +19,13 @@ const AdditionalInfo = () => (
             think you’ll be popping by.
             <br />
             <span>Address : </span>
-            <a
+            <Link
               href="https://goo.gl/maps/V5V6NP8BBMSkTnm86"
               rel="noopener noreferrer"
               target="_blank"
             >
               Gate Cottage, Stammergate Lane, Linton, LS22 4JB
-            </a>
+            </Link>
             <br />
             From the main road in Linton, follow the white railings down a steep
             little hill next to The Windmill Pub, and you'll find the house just
@@ -53,12 +50,12 @@ const AdditionalInfo = () => (
             the White Hart Hotel, which is a short walk from the ceremony venue.
             We have secured a number of rooms at a fixed rate of £109 per
             night. To book one of these rooms, please email Rachel at
-            <a
+            <Link
               href="mailto:office@whiteharthotelharrogate.com?Subject=Room Booking - GA00265"
               target="_top"
             >
-              office@whiteharthotelharrogate.com
-            </a>
+              <spand> office@whiteharthotelharrogate.com </spand>
+            </Link>
             quoting the code GA00265.
           </p>
         </div>
@@ -77,7 +74,15 @@ const AdditionalInfo = () => (
             items to help us complete our new home, and to help us along the way
             with planning our dream honeymoon, which are listed on Prezzola.
           </p>
-          <p>Prezzola link</p>
+          <p>
+            <Link
+              href="https://prezola.com/wishlists/10205205/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Prezola Gift List
+            </Link>
+          </p>
         </div>
       </div>
     </Spotlight>
@@ -89,13 +94,14 @@ const AdditionalInfo = () => (
           <p>
             If you have any questions, or need any further information then
             please don't hesitate to contact Becca on <span> </span>
-            <a href="tel:07552783044">07552783044</a>, or at <span> </span>
-            <a
+            <Link href="tel:07552783044">07552783044</Link>, or at{" "}
+            <span> </span>
+            <Link
               href="mailto:rebeccaculleton@hotmail.co.uk?Subject=Wedding Help"
               target="_top"
             >
               rebeccaculleton@hotmail.co.uk.
-            </a>
+            </Link>
             <span> </span>Ed has no idea what's going on...
           </p>
         </div>
@@ -117,8 +123,8 @@ const Spotlight = styled.div`
   }
 
   .textWrapper {
-    padding: 6rem 10rem 3rem 6rem
-    width: 75%; 
+    padding: 6rem 10rem 3rem 6rem;
+    width: 75%;
     margin: 0 auto;
     align-self: center;
   }
@@ -143,13 +149,13 @@ const Spotlight = styled.div`
     font-weight: 300;
   }
   a {
-        font-size: 1.25rem;
+    font-size: 1.25rem;
     margin: 0 0 2rem 0;
     font-weight: 300;
   }
 
   span {
-        font-size: 1.25rem;
+    font-size: 1.25rem;
     margin: 0 0 2rem 0;
     font-weight: 300;
   }
@@ -161,16 +167,16 @@ const Spotlight = styled.div`
     width: 35%;
   }
   .image1 {
-    background-image: url("${windmill}");
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787856/windmill_fcns15.jpg");
   }
   .image2 {
-    background-image: url("${harrogateMap}");
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787934/harrogateMap_wzvbx1.jpg");
   }
   .image3 {
-    background-image: url("${exit}");
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787849/exit.jpg");
   }
-  w.image4 {
-    background-image: url("${bestival}");
+  .image4 {
+    background-image: url("https://res.cloudinary.com/eddemott/image/upload/f_auto,q_auto/v1556787849/bestival.jpg");
   }
 `;
 

@@ -251,8 +251,9 @@ class RsvpPage extends React.Component {
     );
   }
 }
+
 const AddGuest = styled.button`
-  background-color: DodgerBlue;
+  background-color: #6a7c80;
   border: none;
   color: white;
   padding: 12px 16px;
@@ -260,10 +261,6 @@ const AddGuest = styled.button`
   cursor: pointer;
   margin: auto;
   margin-bottom: 1em;
-
-  .btn:hover {
-    background-color: RoyalBlue;
-  }
 `;
 
 const EditGuest = styled.button`
@@ -271,11 +268,7 @@ const EditGuest = styled.button`
     font-size: 16px;
     cursor: pointer;
     display: block;
-    margin: auto;
-    
-  }
-  .btn:hover {
-    background-color: RoyalBlue;
+    margin: auto; 
   }
 `;
 
@@ -376,7 +369,7 @@ const RSVP = styled.div`
   }
 
   .rs1.wrap-input {
-    width: calc((100% - 40px) / 2);
+    width: calc((100% - 4em) / 2);
   }
 
   .input {
