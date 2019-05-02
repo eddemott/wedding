@@ -12,9 +12,9 @@ const AdditionalInfo = () => (
           <h2>Sunday</h2>
           <p>
             Many of you have travelled far and wide to celebrate with us, and we
-            would like to spend as much time with you as we can! The bride’s
-            mum and stepdad are opening their doors from 12-3pm for anyone who
-            is still around, to enjoy a ploughman's lunch, and nurse our
+            would like to spend as much time with you as we can! Becca's Mum and
+            Stepdad will be opening their doors from 12pm until 3pm for anyone
+            who is still around, to enjoy a ploughman's lunch, and nurse our
             hangovers together. Please let us know in the RSVP section if you
             think you’ll be popping by.
             <br />
@@ -28,8 +28,8 @@ const AdditionalInfo = () => (
             </Link>
             <br />
             From the main road in Linton, follow the white railings down a steep
-            little hill next to The Windmill Pub, and you'll find the house just
-            down there on the left.
+            little hill next to The Windmill Pub, and you'll find Gate Cottage
+            just down there on the left.
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@ const AdditionalInfo = () => (
               href="mailto:office@whiteharthotelharrogate.com?Subject=Room Booking - GA00265"
               target="_top"
             >
-              <spand> office@whiteharthotelharrogate.com </spand>
+              <span> office@whiteharthotelharrogate.com </span>
             </Link>
             quoting the code GA00265.
           </p>
@@ -70,9 +70,9 @@ const AdditionalInfo = () => (
           <h2>Gift List</h2>
           <p>
             Your presence at our wedding is gift enough, but if you do wish to
-            buy us something to mark this occasion then we have a selected some
-            items to help us complete our new home, and to help us along the way
-            with planning our dream honeymoon, which are listed on Prezzola.
+            buy us something to mark this occasion then we have a selected a few
+            items for our newly renovated home, and some vouchers to help us
+            along the way with planning our dream honeymoon.
           </p>
           <p>
             <Link
@@ -102,7 +102,7 @@ const AdditionalInfo = () => (
             >
               rebeccaculleton@hotmail.co.uk.
             </Link>
-            <span> </span>Ed has no idea what's going on...
+            Ed has no idea what's going on...
           </p>
         </div>
       </div>
@@ -148,12 +148,6 @@ const Spotlight = styled.div`
     margin: 0 0 2rem 0;
     font-weight: 300;
   }
-  a {
-    font-size: 1.25rem;
-    margin: 0 0 2rem 0;
-    font-weight: 300;
-  }
-
   span {
     font-size: 1.25rem;
     margin: 0 0 2rem 0;

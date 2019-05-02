@@ -64,7 +64,7 @@ const line = () => (
         </div>
         <div className="timeline-marker" />
         <div className="timeline-content">
-          <h3 className="timeline-title">Coffee, cake & late night snacks</h3>
+          <h3 className="timeline-title">Coffee, Cake & Late Night Snacks</h3>
         </div>
       </li>
       <li className="timeline-item">

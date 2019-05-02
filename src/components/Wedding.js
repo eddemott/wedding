@@ -20,12 +20,12 @@ const WeddingPage = () => (
           <h2>The Ceremony</h2>
           <p>
             The Ceremony will take place at the Sun Pavilion, which is within
-            easy walking distance of the center of Harrogate. The ceremony will
-            begin promptly at 1:30pm. If you are coming from further afield
+            easy walking distance of the centre of Harrogate. The ceremony will
+            begin promptly at 1:30 pm. If you are coming from further afield
             please give yourself plenty of time to get there as Harrogate
-            traffic can be heavy on a Saturday. The groomsparty will be enjoying
-            a drink in the Fat Badger Public House beforehand if you wish to
-            arrive earlier.
+            traffic can be heavy on a Saturday. The grooms party will be
+            enjoying a drink in the Fat Badger Public House beforehand if you
+            wish to arrive earlier.
             <br />
             After the ceremony, transport will be provided to the reception
             venue, where there is limited space for parking.
@@ -58,9 +58,9 @@ const WeddingPage = () => (
         <div className="textWrapper left">
           <h2>Dress Code</h2>
           <p>
-            Semi formal attire. Jacket & a tie is sufficient for men, summer
+            Semi-formal attire. Jacket & a tie is sufficient for men, summer
             dresses for ladies. Given the reception will be held in the garden,
-            we would suggest that ladies in particular wear appropriate
+            we would suggest that ladies, in particular, wear appropriate
             footwear. We would also advise that you avoid wearing yellow- it
             appears to be particularly attractive to the garden's fauna.
           </p>
@@ -75,7 +75,7 @@ const WeddingPage = () => (
           <p>
             Harrogate taxis get very busy on a Saturday night, so it is
             advisable to prebook your ride home for the end of the night. The
-            wedding will be well signposted, however taxis can be advised that
+            wedding will be well signposted, however, taxis can be advised that
             Hay a Park is half a mile past Knaresborough Rugby Club.
           </p>
           <p>

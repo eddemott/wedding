@@ -160,7 +160,7 @@ class RsvpPage extends React.Component {
                     </Toggle>
                   </div>
                   <div className="tottleLable">
-                    <span>... on the Sunday?</span>
+                    <span>... for lunch on Sunday?</span>
                   </div>
                 </div>
               </fieldset>

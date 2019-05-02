@@ -140,14 +140,14 @@ class Navigation extends React.Component {
               <StyledLink to={routes.home}>Home</StyledLink>
             </li>
             <li>
-              <StyledLink to={routes.Wedding}>On the day</StyledLink>
+              <StyledLink to={routes.Wedding}>On The Day</StyledLink>
             </li>
             <li>
               <StyledLink to={routes.RSVP}>RSVP</StyledLink>
             </li>
             <li>
               <StyledLink to={routes.AdditionalInfo}>
-                Additional info
+                Additional Info
               </StyledLink>
             </li>
           </ul>
