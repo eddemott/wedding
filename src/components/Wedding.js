@@ -30,21 +30,23 @@ const WeddingPage = () => (
             After the ceremony, transport will be provided to the reception
             venue, where there is limited space for parking.
           </p>
-          <Link
-            href="www.thefatbadgerharrogate.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Fat Badger
-          </Link>
-          <br />
-          <Link
-            href="www.thesunpavillion.co.uk"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Sun Pavillion
-          </Link>
+          <div>
+            <Link
+              href="http://thefatbadgerharrogate.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              The Fat Badger
+            </Link>
+            <Link
+              href="http://www.sunpavilion.co.uk/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="Pavillion"
+            >
+              The Sun Pavillion
+            </Link>
+          </div>
         </div>
       </div>
       <div className="image image1" alt="Socks" />
@@ -127,36 +129,6 @@ const Banner = styled.div`
     background-size: cover;
     width: 50%;
   }
-  @media screen and (max-width: 850px) {
-    flex-direction: column-reverse;
-    text-align: center;
-
-    p {
-      font-size: 1.1rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    .content {
-      padding: 2.5rem 2rem 0.5rem 2rem;
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .imageBanner {
-      width: 100%;
-      max-width: 100%;
-      height: 45vh;
-    }
-  }
 `;
 
 const Spotlight = styled.div`
@@ -165,7 +137,6 @@ const Spotlight = styled.div`
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  z-index: -1;
 
   .content {
     width: 65%;
@@ -204,6 +175,9 @@ const Spotlight = styled.div`
     font-weight: 300;
   }
 
+  .Pavillion {
+    margin-left: 4em;
+  }
   .image {
     background-position: center;
     background-repeat: no-repeat;
