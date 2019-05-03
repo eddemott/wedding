@@ -8,6 +8,7 @@ const Link = styled.a`
   padding: 0 1px;
   transition: color ease 0.3s;
   margin: 0;
+  text-align: center;
 
   ::before,
   ::after {

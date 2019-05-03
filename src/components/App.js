@@ -10,6 +10,7 @@ import WeddingPage from "./Wedding";
 import * as routes from "../constants/routes";
 
 const App = () => (
+  
   <Router>
     <div>
       <Navigation />
