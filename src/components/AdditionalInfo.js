@@ -76,7 +76,7 @@ const AdditionalInfo = () => (
             <h2>Gift List</h2>
             <p>
               Your presence at our wedding is gift enough, but if you do wish to
-              buy us something to mark this occasion then we have a selected a few
+              buy us something to mark this occasion then we have selected a few
               items for our newly renovated home, and some vouchers to help us
               along the way with planning our dream honeymoon.
           </p>
@@ -107,15 +107,15 @@ const AdditionalInfo = () => (
             <p>
               If you have any questions, or need any further information then
             please don't hesitate to contact Becca on <span> </span>
-              <Link href="tel:07552783044">07552783044</Link>, or at{" "}
+              <Link href="tel:07552783044">07552783044</Link>, or at
               &nbsp;
             <Link
                 href="mailto:rebeccaculleton@hotmail.co.uk?Subject=Wedding Help"
                 target="_top"
               >
-                rebeccaculleton@hotmail.co.uk.
+              rebeccaculleton@hotmail.co.uk.
             </Link>
-              &nbsp; Ed has no idea what's going on...
+              &nbsp;Ed has no idea what's going on...
           </p>
           </div>
         </div>
