@@ -81,12 +81,7 @@ const line = () => (
 );
 
 const Line = styled.div`
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center; */
+font-family: "Helvetica Neue LT Std";
 
   .timeline {
     width: 100%;

@@ -95,6 +95,7 @@ const WeddingPage = () => (
       
       
 const Wedding = styled.div`
+font-family: "Helvetica Neue LT Std";
 .top {
 padding-top: 5em;
 }

@@ -5,8 +5,8 @@ import Link from "./Link";
 
 const AdditionalInfo = () => (
   <Info>
-    <div className="row">
-      <div className="col-lg-6 col-xs-12 first-lg">
+    <div className="row top">
+      <div className="col-lg-7 col-xs-12 first-lg">
         <div className="box left">
           <div className="content">
             <h2>Sunday</h2>
@@ -125,6 +125,7 @@ const AdditionalInfo = () => (
 );
 
 const Info = styled.div`
+font-family: "Helvetica Neue LT Std";
   .top {
   padding-top: 5em;
   }

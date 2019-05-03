@@ -94,6 +94,8 @@ class RsvpPage extends React.Component {
       <RSVP>
         {this.state.success !== true && (
           <div className="form-wrap">
+            <h2>Let us know if you can make our special weekend!</h2>
+            <h3>Please add all the guests in your party indvidually.</h3>
             <form className="rsvp-form" onSubmit={this.submit}>
               <label className="label-input">Your Name *</label>
               <div className="wrap-input rs1">
@@ -253,6 +255,7 @@ class RsvpPage extends React.Component {
 }
 
 const AddGuest = styled.button`
+font-family: "Helvetica Neue LT Std";
   background-color: #6a7c80;
   border: none;
   color: white;
@@ -272,9 +275,11 @@ const EditGuest = styled.button`
   }
 `;
 
-const ErrorText = styled.div``;
+const ErrorText = styled.div`
+font-family: "Helvetica Neue LT Std";`;
 
 const RSVP = styled.div`
+  font-family: "Helvetica Neue LT Std";
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -282,6 +287,13 @@ const RSVP = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #c0cdc2;
+
+  h2, h3 {
+    font-family: "Helvetica Neue LT Std";
+    text-align: center;
+    color: #555555;
+    font-weight: 300;
+  }
 
   .toggleContainer {
     display: block;
@@ -309,7 +321,10 @@ const RSVP = styled.div`
     outline: none;
     border: 1px solid #dddddd;
     margin-bottom: 1em;
+    border-radius: 5px;
   }
+
+
 
   table {
     margin-bottom: 1em;
@@ -352,7 +367,7 @@ const RSVP = styled.div`
     width: 790px;
     background: #fff;
     border-radius: 2em;
-    padding: 5em 2em 5em 2em;
+    padding: 2em;
   }
   .label-input {
     font-size: 1.2em;
@@ -366,6 +381,7 @@ const RSVP = styled.div`
     width: 100%;
     border-radius: 0.1em;
     margin-bottom: 1em;
+
   }
 
   .rs1.wrap-input {
@@ -379,6 +395,7 @@ const RSVP = styled.div`
     font-size: 1em;
     color: #333333;
     height: 2em;
+    border-radius: 6px;
   }
 
   .input[type="text"] {
@@ -388,6 +405,10 @@ const RSVP = styled.div`
     -o-transition: all 0.3s ease-in-out;
     outline: none;
     border: 1px solid #dddddd;
+    padding-left: 5px;
+    ::placeholder {
+    padding-left: 5px;
+    }
   }
 
   .input[type="text"]:focus {
@@ -407,9 +428,20 @@ const RSVP = styled.div`
     color: #555555;
     font-size: 1em;
   }
+  input[type="submit"] {
+  font-family: "Helvetica Neue LT Std";
+  background-color: #6a7c80;
+  border: none;
+  color: white;
+  padding: 1em;
+  font-size: 16px;
+  cursor: pointer;
+  margin: auto;
+}
 `;
 
 const Toggle = styled.div`
+font-family: "Helvetica Neue LT Std";
     position: relative; 
 }
 .onoffswitch-checkbox {
@@ -452,19 +484,7 @@ const Toggle = styled.div`
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
-    background-color: #94A68A; 
-
-input[type="submit"] {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+    background-color: #94A68A;
 }
 `;
 

@@ -65,11 +65,9 @@ const HomePage = () => (
     </div>
 
     <SaveTheDate>
-      <div>BECCA & ED</div>
-      <div className="save">
-        Save<span className="the"> the </span>date
-      </div>
-      <div>29.06.19 | HARROGATE</div>
+      <div>29<sup>th</sup> June 2019</div>
+      <div className="save">Becca & Ed</div>
+      <div>The Sun Pavilion | Harrogate</div>
     </SaveTheDate>
   </BackgroundImage>
 );
@@ -130,9 +128,9 @@ const SaveTheDate = styled.div`
   opacity: 0.9;
   font-family: "Helvetica Neue LT Std";
 
-  font-size: 4vw;
-  padding: 10px 20px 10px 20px;
-  border-radius: 5px;
+  font-size: 3vw;
+  padding: .3em 1em;
+  border-radius: 4px;
   white-space: nowrap;
 
   @media screen and (max-width: 850px) {
