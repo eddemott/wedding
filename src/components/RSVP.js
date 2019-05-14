@@ -17,7 +17,7 @@ class RsvpPage extends React.Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.submit = this.submit.bind(this);
+    this.savetodb = this.savetodb.bind(this);
     this.addGuest = this.addGuest.bind(this);
   }
 
@@ -58,6 +58,9 @@ class RsvpPage extends React.Component {
           }
         ])
       });
+      this.setState({
+        notEmpty: ""
+      });
     } else {
       // set an error in state
       this.setState({
@@ -74,19 +77,32 @@ class RsvpPage extends React.Component {
     });
   }
 
-  submit(event) {
+  savetodb(event) {
+    const REQUIRED_FIELDS = ["firstName", "lastName"];
     const db = firebase.firestore();
 
-    let results = this.state.guests.map(guests => {
-      return db.collection("rsvp").add(guests);
-    });
-
-    Promise.all(results).then(() => {
+    const isValid = REQUIRED_FIELDS.reduce(
+      (result, fieldName) =>
+        !!this.state[fieldName] && this.state[fieldName].length > 0 && result
+    );
+    if (isValid) {
+      // set an error in state
       this.setState({
-        success: true
+        notEmpty: "You have guest information that will no be saved - add the guest by clicking 'Add another Guest' before Submit"
       });
-    });
-    event.preventDefault();
+    } else {
+      // perform add and remove error in state
+      let results = this.state.guests.map(guests => {
+        return db.collection("rsvp").add(guests);
+      });
+
+      Promise.all(results).then(() => {
+        this.setState({
+          success: true
+        });
+      });
+      event.preventDefault();
+    }
   }
 
   render() {
@@ -96,7 +112,7 @@ class RsvpPage extends React.Component {
           <div className="form-wrap">
             <h2>Let us know if you can make our special weekend!</h2>
             <h3>Please add all the guests in your party indvidually.</h3>
-            <form className="rsvp-form" onSubmit={this.submit}>
+            <form className="rsvp-form">
               <label className="label-input">Your Name *</label>
               <div className="wrap-input rs1">
                 <input
@@ -239,9 +255,14 @@ class RsvpPage extends React.Component {
                 </table>
               )}
               {this.state.guests.length > 0 && (
-                <input className="addToFB" type="submit" value="Submit" />
+                <AddGuest className="btn"
+                type="button"
+                onClick={event => this.savetodb(event)}>Submit</AddGuest>
               )}
             </form>
+            <NotEmpty>
+                {this.state.notEmpty && this.state.notEmpty}
+              </NotEmpty>
           </div>
         )}
         {this.state.success === true && (
@@ -253,6 +274,11 @@ class RsvpPage extends React.Component {
     );
   }
 }
+
+const NotEmpty = styled.div`
+  color: red;
+  text-align: center;
+`;
 
 const AddGuest = styled.button`
 font-family: "Helvetica Neue LT Std";
@@ -272,11 +298,14 @@ const EditGuest = styled.button`
     cursor: pointer;
     display: block;
     margin: auto; 
-  }
 `;
 
 const ErrorText = styled.div`
-font-family: "Helvetica Neue LT Std";`;
+  font-family: "Helvetica Neue LT Std";
+  color: red;
+  text-align: center;
+  padding: 1em;
+`;
 
 const RSVP = styled.div`
   font-family: "Helvetica Neue LT Std";
@@ -323,8 +352,6 @@ const RSVP = styled.div`
     margin-bottom: 1em;
     border-radius: 5px;
   }
-
-
 
   table {
     margin-bottom: 1em;
@@ -442,8 +469,13 @@ const RSVP = styled.div`
 
 const Toggle = styled.div`
 font-family: "Helvetica Neue LT Std";
-    position: relative; 
-}
+    position: relative;
+
+    .input[type='checkbox'] {
+    display: none;
+    visibility: hidden;
+  }
+
 .onoffswitch-checkbox {
     display: none;
 }

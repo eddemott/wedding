@@ -6,7 +6,7 @@ const line = () => (
     <ul className="timeline timeline-centered">
       <li className="timeline-item">
         <div className="timeline-info">
-          <span>1:00pm</span>
+          <span>From 1:00pm</span>
         </div>
         <div className="timeline-marker" />
         <div className="timeline-content">
@@ -107,6 +107,7 @@ font-family: "Helvetica Neue LT Std";
     margin: 0 0 0.5em 0;
     text-transform: uppercase;
     white-space: nowrap;
+    margin-top: 0.2em;
   }
 
   /*----- TIMELINE MARKER -----*/
@@ -146,9 +147,11 @@ font-family: "Helvetica Neue LT Std";
   /*----- TIMELINE CONTENT -----*/
   .timeline-content {
     padding-bottom: 40px;
+    margin-top: 0.2em;
   }
   .timeline-content p:last-child {
     margin-bottom: 0;
+    margin-top: 0.2em;
   }
   .timeline-centered,
   .timeline-centered .timeline-item,
