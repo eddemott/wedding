@@ -88,7 +88,7 @@ class RsvpPage extends React.Component {
     if (isValid) {
       // set an error in state
       this.setState({
-        notEmpty: "You have guest information that will no be saved - add the guest by clicking 'Add another Guest' before Submit"
+        notEmpty: "You have guest information that will no be saved - add the guest by clicking 'Add Guest' before Submit"
       });
     } else {
       // perform add and remove error in state
@@ -198,7 +198,7 @@ class RsvpPage extends React.Component {
               <AddGuest className="btn" type="button" onClick={this.addGuest}>
                 {this.state.guests.length > 0 && (
                   <span>
-                    <i className="fas fa-plus" /> Add another Guest
+                    <i className="fas fa-plus" /> Add Guest
                   </span>
                 )}
                 {this.state.guests.length === 0 && (
